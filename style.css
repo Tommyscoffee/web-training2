@@ -1,0 +1,74 @@
+body{
+    /* margin-left:70px; */
+    margin:0;
+}
+#slider li{
+    display:none;
+}
+.active{
+    display:block;
+}
+header{
+    height:775px;
+    position:relative;
+    top:24px;
+    left:24px;
+    /* height:770px; */
+}
+.header-icon{
+    /* margin-left:20px; */
+    position:absolute;
+    height:70px;
+    width:100%;
+}
+.slide ul{
+    /* これで画像を横になれべられた */
+    display:flex;
+    
+}
+.slide li{
+    display:flex;
+    /* これで画像の下に説明文.slide-textを並べられた */
+    flex-direction:column;
+    width:320px;
+
+}
+.slide li:not(:last-child){
+    margin-right:40px;
+}
+.slide img{
+    width:320px;
+    height:420px;
+    object-fit:cover;
+    border-radius:10px;
+
+}
+.header-contents{
+    /* flexで子要素のwidthが効かなくなる */
+    /* height:inheritを指定しないと、中央にならない */
+    height:inherit;
+    display:flex;
+    /* これで、left,rightの高さの指定ができたし、rightがleftに重ならなくなった */
+    align-items:center;
+    width:100%;
+}
+.header-left{
+    /* width:35%; */
+    padding-left:80px;
+    /* これで、親要素にdisplay:flex;を指定しているせいで、widthが効かなくなっているのが直った */
+    flex-shrink:0;
+    /* position: absolute; */
+    /* top:200px; */
+    width:35%;
+}
+.header-left h1{
+    font-size:48px;
+}
+.header-left-wrapper{
+    /* height:360px; */
+    /* width:35%; */
+}
+.header-left button{
+    background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%) !important;
+
+}
